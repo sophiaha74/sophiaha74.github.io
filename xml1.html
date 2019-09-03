@@ -1,0 +1,30 @@
+<!DOCTYPE html>  
+<html>  
+<body>  
+<h1>Important Note</h1>  
+<div>  
+<b>Tropical Cyclone ID:</b> <span id="TropicalCycloneID"></span><br>  
+<b>Tropical Cyclone Chinese Name:</b> <span id="TropicalCycloneChineseName"></span><br>  
+<b>Tropical Cyclone English Name:</b> <span id="TropicalCycloneEnglishName"></span>  
+</div>  
+<script>  
+if (window.XMLHttpRequest)  
+  {// code for IE7+, Firefox, Chrome, Opera, Safari  
+  xmlhttp=new XMLHttpRequest();  
+  }  
+else  
+  {// code for IE6, IE5  
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");  
+  }  
+xmlhttp.open("GET","YTxml1.xml",false);  
+xmlhttp.send();  
+xmlDoc=xmlhttp.responseXML;  
+document.getElementById("TropicalCycloneID").innerHTML=  
+xmlDoc.getElementsByTagName("TropicalCycloneID")[0].childNodes[0].nodeValue;  
+document.getElementById("TropicalCycloneChineseName").innerHTML=  
+xmlDoc.getElementsByTagName("TropicalCycloneChineseName")[0].childNodes[0].nodeValue;  
+document.getElementById("TropicalCycloneEnglishName").innerHTML=  
+xmlDoc.getElementsByTagName("TropicalCycloneEnglishName")[0].childNodes[0].nodeValue;  
+</script>  
+</body>  
+</html>   
