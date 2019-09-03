@@ -1,0 +1,33 @@
+<html>
+<head>
+<title> Reading XML file </title>
+<script type="text/javascript">
+function readXML()
+{
+	var xml=new XMLHttpRequest();
+	xml.open('GET','http://www.weather.gov.hk/wxinfo/currwx/tc_list.xml',false);
+	xml.send();
+	var xmlData=xml.responseXML;
+	
+if (!xmlData)
+	{
+	xmlData=(new DOMParser()).praseFromString(xml.responseText,'text/xml');
+	};
+	var TC=xmlData.getElementsByTagName("TropicalCyclone");
+	var id=TC[0].getElementsByTagName("TropicalCycloneID")[0].firstchild.data;
+	var cname=TC[0].getElementsByTagName("TropicalCycloneChineseName")[0].firstchild.data;
+	var ename=TC[0].getElementsByTagName("TropicalCycloneEnglishName")[0].firstchild.data;
+	document.write("ID="+id+"<br>");
+	document.write("Chinese Name="+cname+"<br>");
+	document.write("English Name="+ename+"<br>");
+
+	
+}
+</script>
+</head>
+<body>
+	<h1>XML File<h1>
+	<button onclick="readXML()">Read web XML File 1</button>
+</body>
+</html>
+	
