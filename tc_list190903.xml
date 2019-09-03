@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TropicalCycloneList>
+<TropicalCyclone>
+<TropicalCycloneID>1917</TropicalCycloneID>
+<TropicalCycloneChineseName>劍魚</TropicalCycloneChineseName>
+<TropicalCycloneEnglishName>KAJIKI</TropicalCycloneEnglishName>
+<TropicalCycloneURL>http://www.weather.gov.hk/wxinfo/currwx/hko_tctrack_1917.xml</TropicalCycloneURL>
+</TropicalCyclone>
+<TropicalCyclone>
+<TropicalCycloneID>1918</TropicalCycloneID>
+<TropicalCycloneChineseName>LINGLING</TropicalCycloneChineseName>
+<TropicalCycloneEnglishName>玲玲</TropicalCycloneEnglishName>
+<TropicalCycloneURL>http://www.weather.gov.hk/wxinfo/currwx/hko_tctrack_1918.xml</TropicalCycloneURL>
+</TropicalCyclone>
+</TropicalCycloneList>
