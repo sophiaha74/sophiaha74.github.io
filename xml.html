@@ -5,7 +5,7 @@
 function readXML()
 {
 	var xml=new XMLHttpRequest();
-	xml.open('GET','http://www.weather.gov.hk/wxinfo/currwx/tc_list.xml',false);
+	xml.open('GET','YTxml.xml',false);
 	xml.send();
 	var xmlData=xml.responseXML;
 	
