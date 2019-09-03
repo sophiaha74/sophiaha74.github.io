@@ -7,10 +7,12 @@ function readXML()
 	if (window.XMLHttpRequest)  
 	{// code for IE7+, Firefox, Chrome, Opera, Safari  
 	var xml=new XMLHttpRequest();
+	var brid="IE7+, Firefox, Chrome, Opera, Safari";
 	}
 	else
 	{// code for IE6, IE5  
 	var xml=new ActiveXObject("Microsoft.XMLHTTP");  	
+	var brid="IE6, IE5";
 	}
 	xml.open('GET','YTxml.xml',false);
 	xml.send();
@@ -34,11 +36,9 @@ if (!xmlData)
 </head>
 <body>
 	<h1>XML File<h1>
-	<button onclick="readXML()">Read web XML File 4</button>
+	<button onclick="readXML()">Read web XML File 6</button>
 	<div>  
-		<b>Tropical Cyclone ID:</b> <span id="TropicalCycloneID"></span><br>  
-		<b>Tropical Cyclone Chinese Name:</b> <span id="TropicalCycloneChineseName"></span><br>  
-		<b>Tropical Cyclone English Name:</b> <span id="TropicalCycloneEnglishName"></span>  
+		<b>Browser</b> <span id="BrID"></span> 
 	</div> 
 </body>
 </html>
