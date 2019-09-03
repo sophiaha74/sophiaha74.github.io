@@ -1,7 +1,7 @@
 <!DOCTYPE html>  
 <html>  
 <body>  
-<h1>Important Note</h1>  
+<h1>Important Note 1</h1>  
 <div>  
 <b>Tropical Cyclone ID:</b> <span id="TropicalCycloneID"></span><br>  
 <b>Tropical Cyclone Chinese Name:</b> <span id="TropicalCycloneChineseName"></span><br>  
@@ -16,7 +16,7 @@ else
   {// code for IE6, IE5  
   xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");  
   }  
-xmlhttp.open("GET","YTxml.xml",false);  
+xmlhttp.open("GET","http://www.weather.gov.hk/wxinfo/currwx/tc_list.xml",false);  
 xmlhttp.send();  
 xmlDoc=xmlhttp.responseXML;  
 document.getElementById("TropicalCycloneID").innerHTML=  
